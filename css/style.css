@@ -1,5 +1,22 @@
+:root {
+    --areia_back: #E9DAC1;
+    --azul_claro_back: #21A09D;
+    --azul_escuro_back: #2C3333;
+    --mochila_back_vermelho: #9ED2C6;
+    --mochila_shadow_vermelho: #54BAB9;
+    --mochila_shadow_roxo: #395B64;
+    --mochila_border_roxo: #395B64;
+    --mochila_back_img_vermelho: #54BAB9;
+    --mochila_before_vermelho: #9ED2C6;
+    --mochila_before_roxo: #395B64;
+    --mochila_before_box_shadow_vermelho: #54BAB9;
+    --mochila_after_back: #F2DEBA;
+    --cadastrar_roxo: #395B64; 
+    --branco: #ffffff;
+  }
+
 html {
-    background: radial-gradient(farthest-corner at right top,#21A09D, #06182D);
+    background: radial-gradient(farthest-corner at right top, var(--azul_claro_back), var(--azul_escuro_back));
     height: 100%;
     font-family: 'Roboto', cursive;
 }
@@ -18,7 +35,7 @@ html {
     padding: 4em 2em 2em;
     box-sizing: border-box;
     display: flex;
-    background: #E9DAC1;
+    background: var(--areia_back);
     border-radius: 10px;
     gap: 2em;
 }
@@ -28,13 +45,13 @@ html {
     max-width: 170px;
     height: 180px;
     padding-top: 80px;
-    background-color: #54BAB9;
-    box-shadow: inset 0 6px 0 2px #9ED2C6, 0 -93px 0 -77px #354259, 0 -93px 0 -72px #54BAB9, 0 -93px 0 -68px #354259;
-    background-image: linear-gradient(to right, transparent 5px, transparent 20px, transparent 1px, transparent 25px, transparent 5px, transparent 20px, transparent 20px, transparent 86px, #C2DED1 45px, #C2DED1 230px, transparent 25px, transparent 172px );
+    background-color: var(--mochila_back_vermelho);
+    box-shadow: inset 0 6px 0 2px var(--mochila_shadow_vermelho), 0 -93px 0 -77px var(--mochila_shadow_roxo), 0 -93px 0 -72px var(--mochila_back_vermelho), 0 -93px 0 -68px var(--mochila_shadow_roxo);
+    background-image: linear-gradient(to right, transparent 5px, transparent 20px, transparent 1px, transparent 25px, transparent 5px, transparent 20px, transparent 20px, transparent 86px, var(--mochila_back_img_vermelho) 45px, var(--mochila_back_img_vermelho) 230px, transparent 25px, transparent 172px );
     background-position: center 254px;
     background-size: 305px 6px;
     background-repeat: repeat-x; 
-    border: 5px solid #002B5B;
+    border: 5px solid var(--mochila_border_roxo);
     border-radius: 85px 85px 44px 44px;
     display: inline-block;
     vertical-align: top;
@@ -51,12 +68,12 @@ html {
 .mochila:before {
     height: 75px;
     width: 118px;
-    background-image: radial-gradient(circle closest-corner at 13px 29px , #54BAB9, #54BAB9 2px, transparent 2px, transparent), radial-gradient(circle closest-corner at 13px 29px , #491033, #491033 4px, transparent 4px, transparent), linear-gradient(to bottom, transparent 10px, transparent 15px, #491033 5px, #491033 18px, transparent 18px, transparent 100px), linear-gradient(to right, #54BAB9 10px, #54BAB9 10px, transparent 10px, transparent 16px, #A0E4CB 9px, #A0E4CB 50px), linear-gradient(to bottom, #A0E4CB 8px, #A0E4CB 16px, #491033 8px, #491033 30px, #A0E4CB 20px, #A0E4CB 72px, #A0E4CB 10px, #A0E4CB 57px, #A0E4CB 5%);
+    background-image: radial-gradient(circle closest-corner at 13px 29px , var(--mochila_before_vermelho),  var(--mochila_before_vermelho) 2px, transparent 2px, transparent), radial-gradient(circle closest-corner at 13px 29px , var(--mochila_before_roxo), var(--mochila_before_roxo) 4px, transparent 4px, transparent), linear-gradient(to bottom, transparent 10px, transparent 15px, var(--mochila_before_roxo) 5px, var(--mochila_before_roxo) 18px, transparent 18px, transparent 100px), linear-gradient(to right,  var(--mochila_before_vermelho) 10px,  var(--mochila_before_vermelho) 10px, transparent 10px, transparent 16px,  var(--mochila_before_vermelho) 9px,  var(--mochila_before_vermelho) 50px), linear-gradient(to bottom,  var(--mochila_before_vermelho) 8px,  var(--mochila_before_vermelho) 16px, var(--mochila_before_roxo) 8px, var(--mochila_before_roxo) 30px,  var(--mochila_before_vermelho) 20px,  var(--mochila_before_vermelho) 72px,  var(--mochila_before_vermelho) 10px,  var(--mochila_before_vermelho) 57px,  var(--mochila_before_vermelho) 5%);
     margin-left: 22px;
     margin-top: 58px;
-    border: 4px solid #491033;
+    border: 4px solid var(--mochila_before_roxo);
     border-radius: 11px;
-    box-shadow: 0 4px 0 0 #C2DED1, inset 0px 4px 1px 0 #54BAB9;
+    box-shadow: 0 4px 0 0 var(--mochila_back_img_vermelho), inset 0px 4px 1px 0 var(--mochila_before_box_shadow_vermelho);
     content: '||';
     color: transparent;
     font-family: Comic Sans MS;
@@ -69,10 +86,10 @@ html {
 .mochila:after {
     margin-left: 67px;
     margin-top: -30px;
-    background: #cca16a;
+    background: var(--mochila_after_back);
     width:26px;
     height:26px;
-    border: 3px solid #491033;
+    border: 3px solid var(--mochila_before_roxo);
     border-radius: 3px;
     transform: rotate(45deg);
 }
@@ -87,7 +104,7 @@ html {
     margin: 0.5em 0 1em;
     padding: 1em 0.5em;
     border-radius: 10px;
-    border: 2px solid #40112D;
+    border: 2px solid var(--cadastrar_roxo);
 }
 
 .adicionar label {
@@ -95,8 +112,8 @@ html {
 }
 
 .cadastrar {
-    background-color: #40112D;
-    color: #FFFFFF;
+    background-color: var(--cadastrar_roxo);
+    color: var(--branco);
     cursor: pointer;
 }
 
@@ -108,7 +125,7 @@ html {
 .item {
     list-style: none;
     padding: 0.6em 2em;
-    background: #FFFFFF;
+    background: var(--branco);
     border-radius: 10px;
     margin: 0 0 1em;
     width: 100%;
@@ -126,7 +143,7 @@ html {
     justify-content: center;
     width: 40px;
     height: 40px;
-    Background: #E9DAC1;
+    Background: var(--areia_back);
     font-weight: 400;
 }
 
